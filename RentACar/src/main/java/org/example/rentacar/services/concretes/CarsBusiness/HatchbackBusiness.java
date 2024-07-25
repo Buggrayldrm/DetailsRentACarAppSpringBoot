@@ -59,7 +59,7 @@ public class HatchbackBusiness implements HatchbackService {
     public void rentHatcback(Long id, HatchbackCar hatchbackCar) throws Exception {
         HatchbackCar car = hatchbackRepository.findById(id).orElseThrow(() -> new Exception("Araba bulunamadı."));
         if (!(car instanceof HatchbackCar)) {
-            throw new Exception("Bu işlemler sadece Suv araçlar için geçerlidir.");
+            throw new Exception("Bu işlemler sadece HatchBack araçlar için geçerlidir.");
         }
         if (hatchbackCar.getRentalDaysNumber() > 30) {
             throw new Exception("Hatchback araç 1 aydan uzun kiralanamaz");
