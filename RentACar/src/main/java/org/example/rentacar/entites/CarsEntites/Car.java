@@ -1,9 +1,6 @@
 package org.example.rentacar.entites.CarsEntites;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Inheritance;
-import jakarta.persistence.InheritanceType;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,7 +14,7 @@ import lombok.Setter;
 @Inheritance(strategy = InheritanceType.JOINED)
 public  class Car {
     @Id
-    private String plaka;
+    private Long id;
 
     private String brand;
 
@@ -30,4 +27,6 @@ public  class Car {
     private int OneDayPrice;
 
     private int rentalDaysNumber;
+
+    private boolean isCompany;
 }

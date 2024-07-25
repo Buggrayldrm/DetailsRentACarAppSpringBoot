@@ -4,5 +4,5 @@ import org.example.rentacar.entites.CarsEntites.HatchbackCar;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-public interface HatchbackRepository extends JpaRepository<HatchbackCar,String> {
+public interface HatchbackRepository extends JpaRepository<HatchbackCar,Long> {
 }
