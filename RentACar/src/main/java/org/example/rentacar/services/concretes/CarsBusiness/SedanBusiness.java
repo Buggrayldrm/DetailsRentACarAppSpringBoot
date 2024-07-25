@@ -64,7 +64,7 @@ public class SedanBusiness implements SedanService {
     public void rentSedan(Long id, SedanCar sedanCar) throws Exception {
         SedanCar car = sedanRepository.findById(id).orElseThrow(() -> new Exception("Araba bulunamadı."));
         if (!(car instanceof SedanCar)) {
-            throw new Exception("Bu işlemler sadece Suv araçlar için geçerlidir.");
+            throw new Exception("Bu işlemler sadece Sedan araçlar için geçerlidir.");
         }
 
         if (sedanCar.getRentalDaysNumber() > 30) {
